@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form dengan Validasi JavaScript</title>
+</head>
+<body>
+  <h2>Form dengan Validasi JavaScript</h2>
+
+  <form id="form" novalidate>
+    <div class="field">
+      <label for="name">Nama (Wajib diisi):</label>
+      <input type="text" id="name" onblur="validateField('name')">
+      <div class="error" id="name-error"></div>
+    </div>
+
+    <div class="field">
+      <label for="email">Email:</label>
+      <input type="email" id="email" onblur="validateField('email')">
+      <div class="error" id="email-error"></div>
+    </div>
+
+    <div class="field">
+      <label for="username">Username (Max 10 karakter):</label>
+      <input type="text" id="username" maxlength="10" onblur="validateField('username')">
+      <div class="error" id="username-error"></div>
+    </div>
+
+    <div class="field">
+      <label for="age">Umur (Harus angka, 1 sampai 100):</label>
+      <input type="number" id="age" onblur="validateField('age')">
+      <div class="error" id="age-error"></div>
+    </div>
+
+    <input type="submit" value="Submit">
+    <div class="success" id="success" role="status"></div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
