@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk | FoodSave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="blob blob--teal" aria-hidden="true"></div>
+  <div class="blob blob--amber" aria-hidden="true"></div>
+
+  <main class="page">
+    <section class="card" aria-labelledby="login-title">
+      <div class="brand">
+        <span class="brand__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </span>
+        <span class="brand__name">FoodSave</span>
+      </div>
+
+      <h1 id="login-title">Selamat datang kembali</h1>
+      <p class="subtitle">Masuk untuk menyelamatkan makanan dan pantau dampakmu.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" name="email" placeholder="mahasiswa@universitas.ac.id" autocomplete="email" required>
+          <small class="error" id="emailError" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Kata Sandi</label>
+          <div class="password-wrap">
+            <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required>
+            <button type="button" class="toggle-pw" id="togglePassword" aria-label="Tampilkan kata sandi">
+              <svg id="eyeIcon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <small class="error" id="passwordError" role="alert"></small>
+        </div>
+
+        <div class="row">
+          <label class="check">
+            <input type="checkbox" id="remember" name="remember">
+            <span>Ingat saya</span>
+          </label>
+          <a href="#" class="link">Lupa kata sandi?</a>
+        </div>
+
+        <button type="submit" class="btn btn--primary" id="submitBtn">
+          <span class="btn__label">Masuk</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="divider"><span>ATAU LANJUTKAN DENGAN</span></div>
+
+      <div class="social">
+        <button type="button" class="btn btn--outline" data-provider="Google">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.7v3h3.9c2.3-2.1 3.5-5.2 3.5-8.9z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 7.9-2.9l-3.9-3c-1.1.7-2.5 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.4 14.3a7.200 7.200 0 0 1 0-4.600V6.600H1.400a12 12 0 0 0 0 10.800l4-3.100z"/><path fill="#EA4335" d="M12 4.800c1.800 0 3.300.6 4.600 1.800l3.400-3.400A12 12 0 0 0 1.400 6.600l4 3.100C6.300 6.900 8.900 4.800 12 4.800z"/></svg>
+          Lanjutkan dengan Google
+        </button>
+        <button type="button" class="btn btn--outline" data-provider="University ID">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Lanjutkan dengan University ID
+        </button>
+      </div>
+
+      <p class="signup">Belum punya akun? <a href="#" class="link">Daftar</a></p>
+      <p class="partner">Kamu pemilik toko roti atau restoran? <a href="#" class="link">Gabung sebagai Mitra Penjual</a></p>
+    </section>
+
+    <p class="sdg">
+      <span class="sdg__dot" aria-hidden="true"></span>
+      Mendukung SDG 2: Tanpa Kelaparan &amp; mengurangi sampah makanan
+    </p>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
