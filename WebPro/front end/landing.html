@@ -1,20 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Utama</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodSave | Selamatkan Makanan, Bantu Sesama</title>
+  <meta name="description" content="Selamatkan makanan surplus dari toko roti, kafe, dan pasar terdekat dengan harga hemat. Mendukung SDG 2: Tanpa Kelaparan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="landing.css">
 </head>
 <body>
-    <!-- 
-<table border="1">
-  <tr>
-    <th>Komentar Internal</th>
-  </tr>
-  <tr>
-    <td>Tabel ini hanya catatan di dalam source code dan tidak akan muncul di layar browser.</td>
-  </tr>
-</table>
--->
+
+  <!-- NAVBAR -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="logo">
+        <span class="logo__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </span>
+        FoodSave
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Menu utama">
+        <a href="#home" class="active">Beranda</a>
+        <a href="#makanan">Makanan</a>
+        <a href="#cara-kerja">Cara Kerja</a>
+        <a href="#dampak">Dampak</a>
+        <div class="nav__mobile-actions">
+          <a href="login.html" class="btn btn--ghost">Masuk</a>
+          <a href="#" class="btn btn--primary">Daftar</a>
+        </div>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="login.html" class="link-plain">Masuk</a>
+        <a href="#" class="btn btn--primary btn--sm">Daftar</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="blob blob--teal" aria-hidden="true"></div>
+      <div class="blob blob--amber" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__text reveal">
+          <span class="pill"><span class="pill__dot"></span>12.400+ porsi terselamatkan bulan ini</span>
+          <h1>Selamatkan Makanan.<br><span>Bantu Sesama.</span></h1>
+          <p>Terhubung dengan toko roti, kafe, dan pasar di sekitarmu untuk menyelamatkan makanan surplus berkualitas dengan harga hemat, sekaligus mendukung SDG 2: Tanpa Kelaparan.</p>
+          <div class="hero__cta">
+            <a href="#makanan" class="btn btn--primary">Jelajahi Makanan</a>
+            <a href="#cara-kerja" class="btn btn--outline">Lihat Cara Kerja</a>
+          </div>
+          <ul class="trust">
+            <li>✔ Makanan Terjamin Aman</li>
+            <li>✔ Komitmen Nol Sampah</li>
+            <li>✔ Ambil &lt; 20 Menit</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal">
+          <article class="feature-card">
+            <div class="feature-card__img" aria-hidden="true">🥐</div>
+            <span class="tag tag--amber">Sisa 2 paket hari ini</span>
+            <div class="feature-card__body">
+              <small>TOKO ROTI ARTISAN • 0,4 KM</small>
+              <h3>Paket Kejutan Roti Malam</h3>
+              <p class="muted">Ambil 18.30 – 19.30</p>
+              <div class="feature-card__bottom">
+                <div class="price"><strong>Rp27.000</strong><s>Rp39.000</s></div>
+                <button class="btn btn--primary btn--sm" data-claim="Paket Kejutan Roti Malam">Selamatkan</button>
+              </div>
+            </div>
+          </article>
+          <div class="live-chip">
+            <span class="live-chip__icon">🥬</span>
+            <div><strong>Urban Fresh Market</strong><small>Paket sayur organik baru saja diselamatkan</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARA KERJA -->
+    <section class="section" id="cara-kerja">
+      <div class="container">
+        <div class="section__head center reveal">
+          <span class="eyebrow">SIMPEL &amp; MULUS</span>
+          <h2>Begini Cara Kerjanya</h2>
+          <p>Bergabung dengan gerakan nol-kelaparan hanya butuh tiga langkah dari genggamanmu.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step reveal">
+            <span class="step__num">01</span>
+            <span class="step__icon">🔎</span>
+            <h3>Temukan Makanan</h3>
+            <p>Cari roti, makanan siap santap, dan sayur surplus di dekatmu sebelum toko tutup.</p>
+            <a href="#makanan" class="step__link">Lihat makanan terdekat →</a>
+          </article>
+          <article class="step reveal">
+            <span class="step__num">02</span>
+            <span class="step__icon">🛍️</span>
+            <h3>Reservasi</h3>
+            <p>Pesan paket kejutan dengan harga diskon hanya dengan beberapa klik sebelum kehabisan.</p>
+            <a href="#makanan" class="step__link">Konfirmasi instan →</a>
+          </article>
+          <article class="step reveal">
+            <span class="step__num">03</span>
+            <span class="step__icon">🍽️</span>
+            <h3>Ambil</h3>
+            <p>Tunjukkan bukti digital di kasir pada jam ambil dan nikmati makanan tanpa rasa bersalah.</p>
+            <span class="step__link step__link--static">Tanpa kemasan berlebih ♻</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAFTAR MAKANAN -->
+    <section class="section section--tint" id="makanan">
+      <div class="container">
+        <div class="section__head split reveal">
+          <div>
+            <span class="eyebrow">RADAR SURPLUS LANGSUNG</span>
+            <h2>Tersedia di Sekitarmu Sekarang</h2>
+          </div>
+          <a href="#" class="link-arrow">Lihat semua 42 listing →</a>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Filter kategori">
+          <button class="chip active" data-filter="all" role="tab" aria-selected="true">Semua</button>
+          <button class="chip" data-filter="produce" role="tab" aria-selected="false">Sayur &amp; Buah</button>
+          <button class="chip" data-filter="dinner" role="tab" aria-selected="false">Makan Malam</button>
+          <button class="chip" data-filter="sweet" role="tab" aria-selected="false">Kue &amp; Roti</button>
+        </div>
+
+        <div class="cards" id="cards">
+          <article class="food reveal" data-category="produce">
+            <div class="food__img food__img--green" aria-hidden="true">🥗</div>
+            <span class="tag tag--green">Hemat 70%</span>
+            <div class="food__body">
+              <small class="muted">The Green Grocer • 0,8 km</small>
+              <h3>Paket Panen Musiman</h3>
+              <p>Apel segar, wortel, alpukat, dan bayam siap diambil.</p>
+              <div class="food__bottom">
+                <strong>Rp15.000</strong>
+                <button class="btn btn--primary btn--sm" data-claim="Paket Panen Musiman">Ambil Paket</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="food reveal" data-category="dinner">
+            <div class="food__img food__img--amber" aria-hidden="true">🍕</div>
+            <span class="tag tag--amber">Hemat Rp12.000</span>
+            <div class="food__body">
+              <small class="muted">Bella Forno Trattoria • 1,2 km</small>
+              <h3>Pizza &amp; Focaccia Bakar Kayu</h3>
+              <p>Irisan pizza dan focaccia rosemary dari sisa jam makan malam.</p>
+              <div class="food__bottom">
+                <strong>Rp20.000</strong>
+                <button class="btn btn--primary btn--sm" data-claim="Pizza &amp; Focaccia Bakar Kayu">Ambil Paket</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="food reveal" data-category="sweet">
+            <div class="food__img food__img--brown" aria-hidden="true">🧁</div>
+            <span class="tag tag--green">Hemat 65%</span>
+            <div class="food__body">
+              <small class="muted">Cinnamon &amp; Bean Cafe • 0,3 km</small>
+              <h3>Kotak Pastry &amp; Muffin Harian</h3>
+              <p>Aneka roti pagi, cinnamon roll, dan muffin berry buatan hari ini.</p>
+              <div class="food__bottom">
+                <strong>Rp20.000</strong>
+                <button class="btn btn--primary btn--sm" data-claim="Kotak Pastry &amp; Muffin Harian">Ambil Paket</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="empty" id="emptyState" hidden>Belum ada makanan di kategori ini.</p>
+      </div>
+    </section>
+
+    <!-- DAMPAK -->
+    <section class="section" id="dampak">
+      <div class="container">
+        <div class="section__head center reveal">
+          <span class="eyebrow">AKSI BERSAMA • SDG 2: TANPA KELAPARAN</span>
+          <h2>Dampak Nyata di Lingkungan</h2>
+          <p>Setiap paket yang diselamatkan membantu pemerataan pangan dan mencegah emisi gas rumah kaca dari sampah makanan.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <strong><span class="count" data-target="14250" data-suffix="+">0</span></strong>
+            <b>Porsi Terselamatkan</b>
+            <small>Makanan layak yang dialihkan dengan aman</small>
+          </div>
+          <div class="stat reveal">
+            <strong><span class="count" data-target="85" data-suffix="+">0</span></strong>
+            <b>Mitra Toko &amp; Kafe</b>
+            <small>Toko lokal yang berkomitmen</small>
+          </div>
+          <div class="stat reveal">
+            <strong><span class="count" data-prefix="Rp" data-target="42" data-suffix=" jt">0</span></strong>
+            <b>Dihemat Mahasiswa &amp; Keluarga</b>
+            <small>Bantuan belanja langsung untuk warga</small>
+          </div>
+          <div class="stat reveal">
+            <strong><span class="count" data-target="35.6" data-decimals="1" data-suffix=" ton">0</span></strong>
+            <b>CO₂e Dicegah</b>
+            <small>Setara 8 mobil berhenti beroperasi</small>
+          </div>
+        </div>
+
+        <div class="partner reveal">
+          <div>
+            <span class="eyebrow eyebrow--light">UNTUK BISNIS MAKANAN</span>
+            <h3>Punya toko roti, deli, atau toko bahan makanan?</h3>
+            <p>Ubah stok harian yang tak terjual jadi kebaikan untuk komunitas, kembalikan biaya produksi, dan kurangi biaya pembuangan dengan mudah.</p>
+          </div>
+          <div class="partner__actions">
+            <a href="#" class="btn btn--light">Daftar sebagai Mitra</a>
+            <a href="#" class="btn btn--outline-light">Baca FAQ Mitra</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTIFIKASI -->
+    <section class="section section--tint">
+      <div class="container">
+        <div class="notify reveal">
+          <span class="eyebrow eyebrow--light">JANGAN LEWATKAN SURPLUS SEGAR</span>
+          <h2>Dapatkan kabar saat toko roti tutup di dekatmu</h2>
+          <p>Terima pengingat harian 30 menit sebelum penjualan diskon malam dibuka di lingkunganmu.</p>
+          <form class="notify__form" id="notifyForm" novalidate>
+            <input type="text" id="notifyLocation" placeholder="Masukkan kode pos atau kotamu" aria-label="Kode pos atau kota">
+            <button type="submit" class="btn btn--amber">Kabari Saya</button>
+          </form>
+          <small class="notify__msg" id="notifyMsg" role="status" aria-live="polite">Layanan notifikasi gratis. Bisa berhenti kapan saja.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#home" class="logo logo--footer">
+          <span class="logo__icon" aria-hidden="true">🌿</span> FoodSave
+        </a>
+        <p>Mendukung SDG 2: Tanpa Kelaparan melalui penyelamatan makanan surplus lokal. Menghubungkan toko roti, toko bahan makanan, dan restoran dengan warga sekitar agar makanan layak mengenyangkan orang, bukan menumpuk di TPA.</p>
+      </div>
+      <div>
+        <h4>TAUTAN CEPAT</h4>
+        <a href="#home">Beranda</a>
+        <a href="#makanan">Jelajahi Makanan</a>
+        <a href="#dampak">Dampak Komunitas</a>
+        <a href="#cara-kerja">Misi &amp; SDG 2</a>
+      </div>
+      <div>
+        <h4>IKUT TERLIBAT</h4>
+        <a href="#">Jadi Mitra Bisnis Makanan</a>
+        <a href="#">Relawan Kurir Penyelamat</a>
+        <a href="#">Laporan Keberlanjutan</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <small>© 2026 FoodSave Initiative. Mendukung Tujuan Pembangunan Berkelanjutan 2 (Tanpa Kelaparan).</small>
+      <span><a href="#">Kebijakan Privasi</a><a href="#">Syarat &amp; Ketentuan</a></span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="landing.js"></script>
 </body>
 </html>

@@ -90,7 +90,7 @@
       } catch (_) {}
 
       showMessage("Berhasil masuk! Selamat datang, " + user.name + ".", "success");
-      window.location.href = "index.html";
+      window.location.href = "landing.html";
     } catch (err) {
       showMessage(err.message, "fail");
     } finally {
